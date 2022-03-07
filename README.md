@@ -3,7 +3,7 @@
 
 ## 프로그래밍 고수되기 Python(프로젝트 개발과정)
 1. [파이썬 문법다지기 1](1.pythonGrammer_1)
-    1. 리스트 활용하기
+    1. [리스트 활용하기](1.pythonGrammer_1/1-1.listOperation.py)
     2. 루프 테크닉
 2. [파이썬 문법다지기 2](2.pythonGrammer_2)
     1. 변수의 범위(Scope)
