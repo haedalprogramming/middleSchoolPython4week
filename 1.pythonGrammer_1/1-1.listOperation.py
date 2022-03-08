@@ -8,7 +8,7 @@ print(squares * 2)
 print(squares[0])
 print(squares[-1])
 print(squares[:])
-
+#======================================================================
 letters = list('abcdefg')
 print(letters)
 letters[2:5]=['C','D','E']
@@ -62,18 +62,18 @@ for i in ['a', 'b', 'c']:
 
 nums = [i for i in range(10)]
 print(nums)
-
+#======================================================================
 even_nums = []
 for i in range (1, 11):
     if i % 2 == 0:
         even_nums.append(i)
 print(even_nums)
-
+#======================================================================
 squares = []
 for x in range(10):
     squares.append(x**2)
 print(squares)
-
+#======================================================================
 vec = [-4, -2, 0, 2, 4]
 print([x*2 for x in vec])
 print([x for x in vec if x>= 0])
@@ -97,7 +97,7 @@ if(boolBreak==1):
         print(nums[i-4:i])
 else:
     print(nums[i-3:i+1])
-
+#======================================================================
 fruit=['apple', 'strawberry', 'melon', 'orange', 'banana', 'grape']
 fruit_len=[]
 result=[]
