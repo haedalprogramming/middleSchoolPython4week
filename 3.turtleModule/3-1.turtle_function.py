@@ -44,15 +44,15 @@ turtle.write((0,0),True)
 import turtle as t
 import random as r
 t.shape('turtle')
-def turn(x,y):
-    t.left(180)
-def chcolor(x,y):
+def turnLeft(t, angle):
+    t.left(angle)
+def chcolor(t):
     t.pencolor(r.choice(['red','yellow','green']))
 def move(x,y):
     t.goto(x,y)
-t.onclick(turn)
-t.onrelease(chcolor)
-t.ondrag(move)
+turnLeft(t, 180)
+chcolor(t)
+t.ondrag(move(100,100))
 t.mainloop()
 #======================================================================
 #3.1 라. turtle screen 관련 함수
@@ -85,7 +85,8 @@ def f():
 f()
 t.mainloop()
 #======================================================================
-#3.1 혼자서 해보기
+# 3.1 혼자서 해보기
+# 5개의 원을 그려 과녁을 만드는 스크립트를 작성해보자.
 #======================================================================
 import turtle as t
 t.bgcolor('black')
