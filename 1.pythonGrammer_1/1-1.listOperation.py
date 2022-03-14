@@ -50,9 +50,9 @@ queue = [3, 4 ,5]
 queue.append(6)
 queue.append(7)
 print(queue)
-print(queue.pop())
-print(queue.pop())
-print(queue.pop())
+print(queue.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
 print(queue)
 #======================================================================
 # 1.1 다.리스트 컴프리헨션(Comprehensions)
