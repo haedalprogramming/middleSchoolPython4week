@@ -11,6 +11,7 @@ import time
 
 start = time.time() # 게임 실행 시간으로 적 속도 조절하자
 gameon =False
+score = 0#점수
 def turnright():
     t.setheading(0)
 def turnleft():
@@ -20,15 +21,16 @@ def turnup():
 def turndown():
     t.setheading(270)
 def runforward():
-    global gameon, p
+    global gameon, p, score
     t.forward(10)
     angle = p.towards(t.pos())
     p.setheading(angle)
     p.forward(6+(time.time()-start)/2) # 적 속도 조절
     if t.distance(prey)<15:
         prey.goto(randint(-200,200),randint(-200,200))
+        score += 1#먹으면 점수추가
     if t.distance(p)<15:
-        t.write("Game Over", font=('Aril', 20, 'bold'))
+        t.write("Game Over\nScore:{}".format(score), font=('Aril', 20, 'bold'))#끝나면 점수출력
         gameon = False
         return
     if gameon:
