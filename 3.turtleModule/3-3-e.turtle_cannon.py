@@ -1,5 +1,6 @@
 # 3.3 혼자해보기
 # 게임이 무한히 계속 되지 않도록 게임 종료 조건을 추가해보자.
+# 끝나고 시간이 추가되었습니다
 
 import time
 import turtle as t
@@ -9,7 +10,6 @@ cannon = t.Turtle()
 def init():
     global target, chance
     chance = 0
-
 
     t.setup(700,500)
     t.color('black')

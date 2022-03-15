@@ -44,15 +44,15 @@ turtle.write((0,0),True)
 import turtle as t
 import random as r
 t.shape('turtle')
-def turnLeft(t, angle):
-    t.left(angle)
-def chcolor(t):
+def turn(x,y):
+    t.left(180)
+def chcolor(x,y):
     t.pencolor(r.choice(['red','yellow','green']))
 def move(x,y):
     t.goto(x,y)
-turnLeft(t, 180)
-chcolor(t)
-t.ondrag(move(100,100))
+t.onclick(turn)
+t.onrelease(chcolor)
+t.ondrag(move)
 t.mainloop()
 #======================================================================
 #3.1 라. turtle screen 관련 함수

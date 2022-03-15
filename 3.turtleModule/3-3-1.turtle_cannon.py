@@ -70,6 +70,7 @@
 
 
 # 다. 결과 화면에 출력하기
+# 한번 실행되면 끝인거지? -> 네 끝입니다
 # import turtle as t
 # import random
 # cannon = t.Turtle()
@@ -119,6 +120,7 @@
 # t.mainloop()
 
 # 라. 목표지점을 설정하고 2번에 기회를 주고 초기화하기
+# 초기화 바로 되는게 정상인거지? -> 혼자해보기에서 해볼꺼임
 import turtle as t
 import random
 

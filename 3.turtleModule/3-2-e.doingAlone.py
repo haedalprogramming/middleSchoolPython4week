@@ -3,9 +3,13 @@
 # 일정 시간이 지남에 따라 추격하는 Turtle객체를 추가해보자.
 
 # 점수추가 버전 turtle객체 추가는 너무 복잡해짐
+# 먹이 먹을때마다 속도 추가해주는건 어떨지?
 
 import  turtle as t
 from random import randint
+import time
+
+start = time.time() # 게임 실행 시간으로 적 속도 조절하자
 gameon =False
 def turnright():
     t.setheading(0)
@@ -20,16 +24,16 @@ def runforward():
     t.forward(10)
     angle = p.towards(t.pos())
     p.setheading(angle)
-    p.forward(7)
+    p.forward(6+(time.time()-start)/2) # 적 속도 조절
     if t.distance(prey)<15:
         prey.goto(randint(-200,200),randint(-200,200))
     if t.distance(p)<15:
-        t.write('Game Over', font=('Aril', 20, 'bold'))
+        t.write("Game Over", font=('Aril', 20, 'bold'))
         gameon = False
         return
     if gameon:
         t.ontimer(runforward,100)
-def createpursuer():
+def createpursuer(): # 적
     global p
     p=t.Turtle()
     p.shape('turtle')
@@ -38,7 +42,7 @@ def createpursuer():
     p.hideturtle()
     p.goto(-250,-250)
     p.showturtle()
-def createprey():
+def createprey(): #먹이
     global prey
     prey=t.Turtle()
     prey.shape('circle')
