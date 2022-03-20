@@ -1,6 +1,7 @@
 #======================================================================
 # 4.2 파이게임 라이브러리 살펴보기
-#다. pygame.Surface 객체
+# 다. pygame.Surface 객체
+# 파이게임 실행하기
 #======================================================================
 import pygame
 from pygame.locals import *
@@ -35,6 +36,7 @@ if __name__ == '__main__':
     main()
 #======================================================================
 #바. pygame.time 모듈
+# Pong Game
 #======================================================================
 import pygame, random
 from pygame.locals import *
@@ -87,6 +89,8 @@ pygame.quit()
 #======================================================================
 #사. pygame.Rect
 #실행 파일 디렉토리에 intro_ball.gif파일필요
+# moving Ball
+# 무식하게 프레임별로 전부 컴퓨터가 연산하기 - 기본버전
 #======================================================================
 import pygame, sys
 from pygame.locals import *
@@ -120,6 +124,9 @@ while 1:
     pygame.display.update()
 
     c.tick(120)
+#======================================================================
+# moving Ball 2
+# 마지막 프레임 이후 변경된 부분만 업데이트
 #======================================================================
 import pygame, sys
 from pygame.locals import *
@@ -156,6 +163,9 @@ while 1:
 
     c.tick(120)
 #======================================================================
+# 4-2-4.dataRestoration.py
+# 파이게임에서 이미지의 원본을 유지해야할까?
+# 복원할 데이터의 원본이 없는 예시
 screen = [1, 1, 2, 2, 2, 1]
 print(screen)
 playerpos = 3
@@ -165,6 +175,9 @@ playerpos -= 1
 screen[playerpos] = 8
 print(screen)
 #======================================================================
+# 4-2-4.dataRestoration2.py
+# 파이게임에서 이미지의 원본을 유지해야할까?
+# 복원할 데이터의 원본이 있는 예시
 background = [1, 1, 2, 2, 2, 1]
 screen = [0]*6
 for i in range(6):
@@ -178,3 +191,4 @@ screen[playerpos] = background[playerpos]
 playerpos -= 1
 screen[playerpos] = 8
 print(screen)
+print("원본: ", background)
