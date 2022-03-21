@@ -726,9 +726,13 @@ def drawObject(obj, x, y):
 
 # 운석이랑 충돌
 def explode():
+    font = pygame.font.SysFont('malgungothic', 50)
+    text = font.render("Play Again", True, (255, 0, 0))
+    screen.blit(text, (screen_width/2 - 150, screen_height/2 - 30))
     pygame.display.update()
     sleep(3)
     runGame()
+
 
 # 점수출력
 def showScore(count):
