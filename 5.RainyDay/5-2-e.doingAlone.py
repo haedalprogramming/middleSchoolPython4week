@@ -1,3 +1,7 @@
+# 혼자서 해보기
+# pygame.time.Clock 객체를 활용해 1초동안 업데이트되는 프레임 수 제한하기
+# 초당 20프레임부터 할만하고 60프레임이면 아주 쾌적
+#======================================================================
 import sys, random
 import pygame
 from pygame.locals import *
@@ -107,7 +111,7 @@ def main():
             drop.move()
             drop.draw()
 
-        pygame.time.Clock().tick(6)#1초동안 업데이트되는 프레임수를 제한
+        pygame.time.Clock().tick(60)#1초동안 업데이트되는 프레임수를 제한
         pygame.display.update()
 
 
